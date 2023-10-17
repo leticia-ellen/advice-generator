@@ -1,0 +1,67 @@
+body{
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content{
+    background-color: var(--advice-card-color);
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#title{
+    color: var(--advice-dice-color);
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 10px;
+}
+
+#advice{
+    color: var(--text-color);
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+#advice::after{
+    content: "";
+    background-image: url(../images/pattern-divider-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    text-align: center;
+    width: 1fr;
+    height: 10px;
+    padding: 20px;
+
+}
+
+#random{
+    background-image: url(../images/icon-dice.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--advice-dice-color);
+    position: absolute;
+    bottom: -30px;
+    transition: 0.2s;
+}
+
+#random:hover{
+    box-shadow: 0px 0px 40px 4px var(--advice-dice-color);
+}
